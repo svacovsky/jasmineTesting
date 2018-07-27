@@ -113,8 +113,10 @@ $(function() {
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
          it('are loaded',function(done){
-           expect(document.getElementsByClassName('entry')).toBeDefined;
-           expect(document.getElementsByClassName('entry').length).not.toBe(0);
+           expect(document.getElementsByClassName('feed')).toBeDefined();
+           expect(document.getElementsByClassName('feed').length).not.toBe(0);
+           expect(document.getElementsByClassName('feed')[0].getElementsByClassName('entry')).toBeDefined();
+           expect(document.getElementsByClassName('feed')[0].getElementsByClassName('entry').length).not.toBe(0);
            done();
          });
    });
